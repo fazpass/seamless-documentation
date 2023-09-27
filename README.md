@@ -17,7 +17,7 @@
 | 2  | IOS Native		| [Link](https://github.com/fazpass-sdk/ios-trusted-device-v2)  			|
 | 3  | Flutter			| [Link](https://github.com/fazpass-sdk/flutter-trusted-device-v2)  		|
 | 4  | React Native		| [Link](https://github.com/fazpass-sdk/react-native-trusted-device-v2)  	|
-| 5  | Web Browser		| On The Way|
+| 5  | Web Browser		| Q1 2024|
 
 This sdk will generate META that will be used in the next step. As looked in the chart.
 
@@ -44,7 +44,6 @@ For decrypting the meta, you can use this library
 | 3  | Python			| [Link](https://github.com/fazpass-sdk/python-trusted-device-v2)  		|
 | 4  | Java				| [Link](https://github.com/fazpass-sdk/java-trusted-device-v2)  	|
 
-If you want to decrypt the meta manually, you can decrypt this meta into byte[] using Base64. After that, you can decrypt the byte[] using your private key with PKCS1v15.
 
 ## Meta
 Meta is an object that contains information about the user's device.
