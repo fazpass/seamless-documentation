@@ -9,7 +9,7 @@
 ![Logo](flow_system.png)
 
 ## Preparation
-### 1. Choose your stack technology and install it.
+### Choose your stack technology and install it.
 
 | No | Stack Technology | Link 		|
 | -- | --	 			| --	 	|
@@ -21,10 +21,67 @@
 
 This sdk will generate META that will be used in the next step. As looked in the chart.
 
-### 2. Whitelist IP
+### Whitelist IP
 Whitelist IP is used to secure your API from unauthorized access. You can whitelist your IP in [here](https://fazpass.com).
 
-### 3. Handle Response
+### Endpoint Request Body
+#### Check
+Check device status & user
+```JSON
+"pic_id":"anvarisy@gmail.com/62851++++",
+"meta":"encrypted"
+"merchant_app_id":"7a8s7sadad7a7gas77das7899089as8dasd"
+```
+
+#### Enroll
+Registering user and device as an authenticated user
+```JSON
+"pic_id":"anvarisy@gmail.com/62851++++",
+"meta":"encrypted",
+"merchant_app_id":"com.tokopedia.tkpd",
+"challenge":"id"
+```
+
+#### Validate
+Validating user and device, this will return score and confidence level of security level.
+```JSON
+"fazpass_id":"fazpass_id",
+"meta":"encrypted",
+"merchant_app_id":"com.tokopedia.tkpd",
+"challenge":"id"
+```
+
+#### Remove
+Remove this user & device from authenticated user
+```JSON
+"fazpass_id":"fazpass_id",
+"meta":"encrypted",
+"merchant_app_id":"com.tokopedia.tkpd",
+"challenge":"id"
+```
+
+#### Send Notification
+Send notification into connected device that already trusted
+```JSON
+
+"pic_id":"",
+"merchant_app_id":"7a8s7sadad7a7gas77das7899089as8dasd",
+"meta":"",
+"selected_device":"device_id"
+```
+
+#### Validate Notification
+Verify if the received notification is valid or not, this will auto enroll user that request send notification.
+```JSON
+
+"notification_id":"",
+"merchant_app_id":"7a8s7sadad7a7gas77das7899089as8dasd",
+"meta":"",
+"result":true/false
+
+```
+
+### Handle Response
 After you call the API, you will get the response. This should like this
 ```JSON
 "status":true,
@@ -33,9 +90,9 @@ After you call the API, you will get the response. This should like this
   "meta":"encrypted"
 }
 ```
-You need to decrypt the meta using your private key. You can get the private key in [here](https://fazpass.com).
+You need to decrypt the meta using your private key. You can get the private key [here](https://fazpass.com).
 
-### 4. Decrypt Meta
+### Decrypt Meta
 For decrypting the meta, you can use this library 
 | No | Stack Technology | Link 		|
 | -- | --	 			| --	 	|
@@ -43,12 +100,14 @@ For decrypting the meta, you can use this library
 | 2  | Node Js			| [Link](https://github.com/fazpass-sdk/nodejs-trusted-device-v2)  			|
 | 3  | Python			| [Link](https://github.com/fazpass-sdk/python-trusted-device-v2)  		|
 | 4  | Java				| [Link](https://github.com/fazpass-sdk/java-trusted-device-v2)  	|
+| 5  | PHP				| [Link](https://github.com/fazpass-sdk/php-trusted-device-v2)  	|
 
 
 ## Meta
 Meta is an object that contains information about the user's device.
 ```JSON
 {
+  "challenge":"UUID"
   "fazpass_id":"fazpass_id",
   "scoring":90.0,
   "risk_level":"HIGH/LOW",
@@ -63,7 +122,7 @@ Meta is an object that contains information about the user's device.
   "is_clone_app":true/false,
   "is_screen_sharing":true/false,
   "is_debug":true/false,
-  "application":"com.tokopedia.marketplace"
+  "application":"com.tokopedia.marketplace",
   "device_id":{"name":"Samsung",
                 "os_version":"Q",
                 "series":"A30",
@@ -75,7 +134,25 @@ Meta is an object that contains information about the user's device.
                  "lng":"4.9099876",
                   "distance":"8.4",
                  "time":"30000"},
-  "client_ip":"127.0.0.1"
+  "client_ip":"127.0.0.1",
+  "notifiable_devices":[
+                         {"name":"Samsung",
+                         "os_version":"Q",
+                         "series":"A30",
+                         "cpu":"Mediatek",
+                          "id":"uuid"
+                           },
+                          {"name":"Samsung",
+                          "os_version":"Q",
+                          "series":"A50",
+                          "cpu":"Helios"
+                           "id":"uuid"
+                            }
+                        ]
+  "biometric":{
+              "level":"LOW/HIGH",
+               "is_changed":false/true
+              }
 }
 ```
 All you need is here. You can use this meta to create your own logic to secure your application.
@@ -119,3 +196,9 @@ This is the sim operator of the user's device.
 This is the geolocation of the user's device.
 ### 20. Client IP
 This is the client IP of the user's device.
+### 21. Challenge
+This is unique ID that will be used to enroll, validate & remove. this only active for 90 sec after check request
+### 22. Notifiable Device
+List of connected device that was used by this account
+### 23. Biometric
+Biometric level that was used by user inside the device
