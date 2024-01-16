@@ -25,7 +25,10 @@ This sdk will generate META that will be used in the next step. As looked in the
 Whitelist IP is used to secure your API from unauthorized access. You can whitelist your IP in [here](https://fazpass.com).
 
 ### Endpoint Request Body
+BASE URL IS : https://api.fazpass.com
 #### Check
+URL: /v2/trusted-device/check
+
 Check device status & user
 ```JSON
 "pic_id":"anvarisy@gmail.com/62851++++",
@@ -34,6 +37,8 @@ Check device status & user
 ```
 
 #### Enroll
+URL: /v2/trusted-device/enroll
+
 Registering user and device as an authenticated user
 ```JSON
 "pic_id":"anvarisy@gmail.com/62851++++",
@@ -43,6 +48,8 @@ Registering user and device as an authenticated user
 ```
 
 #### Validate
+/v2/trusted-device/validate
+
 Validating user and device, this will return score and confidence level of security level.
 ```JSON
 "fazpass_id":"fazpass_id",
@@ -52,6 +59,8 @@ Validating user and device, this will return score and confidence level of secur
 ```
 
 #### Remove
+/v2/trusted-device/remove
+
 Remove this user & device from authenticated user
 ```JSON
 "fazpass_id":"fazpass_id",
@@ -61,6 +70,8 @@ Remove this user & device from authenticated user
 ```
 
 #### Send Notification
+/v2/trusted-device/send/notification/cross-device
+
 Send notification into connected device that already trusted
 ```JSON
 
@@ -71,6 +82,9 @@ Send notification into connected device that already trusted
 ```
 
 #### Validate Notification
+
+/v2/trusted-device/validate/notification/cross-device
+
 Verify if the received notification is valid or not, this will auto enroll user that request send notification.
 ```JSON
 
@@ -202,3 +216,47 @@ This is unique ID that will be used to enroll, validate & remove. this only acti
 List of connected device that was used by this account
 ### 23. Biometric
 Biometric level that was used by user inside the device
+
+## Handle Error
+| Error Name              | Combined Code | Explanation                                                  |
+|-------------------------|---------------|--------------------------------------------------------------|
+| ErrGeneral              | 50000         | General error with HTTP 500 Internal Server Error code.      |
+| ErrInvalidToken         | 50012         | Token is invalid with HTTP 500 code.                         |
+| ErrExpiredToken         | 50013         | Token is expired with HTTP 500 code.                         |
+| ErrInvalidMerchantId    | 50014         | Invalid merchant ID with HTTP 500 code.                      |
+| ErrGatewayDoesNotExists | 40001         | Gateway does not exist with HTTP 400 Bad Request code.       |
+| ErrInvalidOtp           | 40002         | OTP is not valid with HTTP 400 code.                         |
+| ErrInvalidRequest       | 40003         | Invalid request with HTTP 400 code.                          |
+| ErrMerhantAppNotFound   | 40404         | Merchant app not found with HTTP 404 Not Found code.         |
+| ErrInvalidKey           | 40005         | Invalid key with HTTP 400 code.                              |
+| ErrMerchantRule         | 40006         | Rule not set with HTTP 400 code.                             |
+| ErrStoreEndUser         | 50007         | End user failed to save with HTTP 500 code.                  |
+| ErrStoreDevice          | 50008         | Device failed to save with HTTP 500 code.                    |
+| ErrStoreUserApp         | 50009         | User app failed to save with HTTP 500 code.                  |
+| ErrLogActivity          | 50010         | Log activity failed to save with HTTP 500 code.              |
+| ErrUpdateUserApp        | 50011         | Update user app failed with HTTP 500 code.                   |
+| ErrSaveKey              | 50015         | Save key failed with HTTP 500 code.                          |
+| ErrStoreMerchantApp     | 50016         | Store merchant app failed with HTTP 500 code.                |
+| ErrFazpassIdNotFound    | 40417         | Fazpass ID not found with HTTP 404 code.                     |
+| ErrFazpassIdNotActive   | 40018         | Fazpass ID not active with HTTP 400 code.                    |
+| ErrStorMerchantRule     | 50019         | Store merchant rule failed with HTTP 500 code.               |
+| ErrEcrypte              | 50020         | Error in encryption with HTTP 500 code.                      |
+| ErrDecprypte            | 50021         | Error in decryption with HTTP 500 code.                      |
+| ErrKeyNotExist          | 50022         | Key does not exist with HTTP 500 code.                       |
+| ErrGetAllMercahntApp    | 50023         | Error getting all merchant app with HTTP 500 code.           |
+| ErrStatusMerchantApp    | 50024         | Invalid status of merchant app with HTTP 500 code.           |
+| ErrGetAllLoActivityEndUser | 50025      | Error getting all activity by user with HTTP 500 code.       |
+| ErrUpdateMerchantApp    | 50026         | Update merchant app failed with HTTP 500 code.               |
+| ErrRevokeDeviceUser     | 50027         | Error revoke device user with HTTP 500 code.                 |
+| ErrPackageIsExist       | 40028         | Package already exists with HTTP 400 code.                   |
+| ErrWhiteListIp          | 40029         | IP not registered with HTTP 400 code.                        |
+| ErrFcmToken             | 40030         | FCM token update failed with HTTP 400 code.                  |
+| ErrNotifiableNotRegister| 40031         | Device cannot send notification with HTTP 400 code.          |
+| ErrDeviceNotFound       | 40032         | Device not found with HTTP 400 code.                         |
+| ErrDeviceNotFoundNotregister | 40033     | Device not found or app not registered with HTTP 400 code.   |
+| ErrSendNotification     | 40034         | Error sending notification with HTTP 400 code.               |
+| ErrValidationExpired    | 40035         | Validation notification expired with HTTP 400 code.          |
+| ErrAlreadyValidation    | 40036         | Validation already done with HTTP 400 code.                  |
+| ErrValidationNo         | 40037         | Validation response no with HTTP 400 code.                   |
+| ErrFileAuthFormatMustBeP8 | 40038        | File auth format must be .p8 with HTTP 400 code.             |
+| ErrUploadFileAuthKey    | 40039         | Upload file auth key failed with
