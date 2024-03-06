@@ -101,21 +101,9 @@ After you call the API, you will get the response. This should like this
 "status":true,
 "code":200
 "data":{
-  "meta":"encrypted"
+  "meta":""
 }
 ```
-You need to decrypt the meta using your private key. You can get the private key [here](https://fazpass.com).
-
-### Decrypt Meta
-For decrypting the meta, you can use this library 
-| No | Stack Technology | Link 		|
-| -- | --	 			| --	 	|
-| 1  | Golang  			| [Link](https://github.com/fazpass-sdk/go-trusted-device-v2)  		|
-| 2  | Node Js			| [Link](https://github.com/fazpass-sdk/nodejs-trusted-device-v2)  			|
-| 3  | Python			| [Link](https://github.com/fazpass-sdk/python-trusted-device-v2)  		|
-| 4  | Java				| [Link](https://github.com/fazpass-sdk/java-trusted-device-v2)  	|
-| 5  | PHP				| [Link](https://github.com/fazpass-sdk/php-trusted-device-v2)  	|
-
 
 ## Meta
 Meta is an object that contains information about the user's device.
