@@ -70,7 +70,7 @@ Remove this user & device from authenticated user
 ```
 
 #### Send Notification
-/v2/trusted-device/send/notification/cross-device
+/v2/trusted-device/send/notification
 
 Send notification into connected device that already trusted
 ```JSON
@@ -83,7 +83,7 @@ Send notification into connected device that already trusted
 
 #### Validate Notification
 
-/v2/trusted-device/validate/notification/cross-device
+/v2/trusted-device/validate/notification
 
 Verify if the received notification is valid or not, this will auto enroll user that request send notification.
 ```JSON
