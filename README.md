@@ -153,11 +153,21 @@ Meta is an object that contains information about the user's device.
                           "cpu":"Helios"
                            "id":"uuid"
                             }
-                        ]
+                        ],
   "biometric":{
               "level":"LOW/HIGH",
                "is_changed":false/true
-              }
+              },
+"enrolled_devices": [
+                {
+                    "id": "c519a31b-839f-4e33-9bfc-5b64fe38593f",
+                    "name": "vivo",
+                    "os_version": "Android 27",
+                    "series": "vivo 1816",
+                    "cpu": "MT6762V/WR",
+                    "EnrolleDate": "2024-01-01T05:14:38.606Z"
+                }
+            ]
 }
 ```
 All you need is here. You can use this meta to create your own logic to secure your application.
@@ -207,6 +217,8 @@ This is unique ID that will be used to enroll, validate & remove. this only acti
 List of connected device that was used by this account
 ### 23. Biometric
 Biometric level that was used by user inside the device
+### 24. Enrolled Device
+List of device that already enrolled by that pic id
 
 ## Handle Error
 | Error Name              | Combined Code | Explanation                                                  |
