@@ -6,7 +6,7 @@
 
 
 ## Introduction
-![Logo](flow_system.png)
+![Logo](general-flow.png)
 
 ## Preparation
 ### Choose your stack technology and install it.
@@ -29,12 +29,13 @@ BASE URL IS : https://api.fazpass.com
 #### Check
 URL: /v2/trusted-device/check
 
-Check device status & user
+Check device status & user. This endpoint also an initiation for other endpoint.
 ```JSON
 "pic_id":"anvarisy@gmail.com/62851++++",
 "meta":"encrypted"
 "merchant_app_id":"7a8s7sadad7a7gas77das7899089as8dasd"
 ```
+![Logo](check-flow.png)
 
 #### Enroll
 URL: /v2/trusted-device/enroll
@@ -46,7 +47,7 @@ Registering user and device as an authenticated user
 "merchant_app_id":"com.tokopedia.tkpd",
 "challenge":"id"
 ```
-
+![Logo](enroll-flow.png)
 #### Validate
 /v2/trusted-device/validate
 
@@ -57,6 +58,7 @@ Validating user and device, this will return score and confidence level of secur
 "merchant_app_id":"com.tokopedia.tkpd",
 "challenge":"id"
 ```
+![Logo](validate-flow.png)
 
 #### Remove
 /v2/trusted-device/remove
@@ -68,9 +70,10 @@ Remove this user & device from authenticated user
 "merchant_app_id":"com.tokopedia.tkpd",
 "challenge":"id"
 ```
+![Logo](remove-flow.png)
 
 #### Send Notification
-/v2/trusted-device/send/notification/cross-device
+/v2/trusted-device/send/notification
 
 Send notification into connected device that already trusted
 ```JSON
@@ -80,20 +83,20 @@ Send notification into connected device that already trusted
 "meta":"",
 "selected_device":"device_id"
 ```
+![Logo](send-notif-flow.png)
 
 #### Validate Notification
 
-/v2/trusted-device/validate/notification/cross-device
+/v2/trusted-device/validate/notification
 
 Verify if the received notification is valid or not, this will auto enroll user that request send notification.
 ```JSON
-
 "notification_id":"",
 "merchant_app_id":"7a8s7sadad7a7gas77das7899089as8dasd",
 "meta":"",
 "result":true/false
-
 ```
+![Logo](validate-notif-flow.png)
 
 ### Handle Response
 After you call the API, you will get the response. This should like this
