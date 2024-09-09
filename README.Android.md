@@ -1,7 +1,5 @@
 # android-trusted-device-v2
 
-This is the Official android package for Fazpass Trusted Device V2.
-For ios counterpart, you can find it here: https://github.com/fazpass-sdk/ios-trusted-device-v2 <br>
 Visit [official website](https://fazpass.com) for more information about the product and see documentation at [online documentation](https://doc.fazpass.com) for more technical details.
 
 ## Android OS
