@@ -14,7 +14,7 @@
 | No | Stack Technology | Link 		                                                                  |
 | -- | --	 			|--------------------------------------------------------------------------|
 | 1  | Android Native  	| [Link](README.Android.md)  		     |
-| 2  | IOS Native		| [Link](https://github.com/fazpass-sdk/ios-trusted-device-v2)  			        |
+| 2  | IOS Native		| [Link](README.iOS.md)  			        |
 | 3  | Flutter			| [Link](https://github.com/fazpass-sdk/flutter-trusted-device-v2)  		     |
 | 4  | React Native		| [Link](https://github.com/fazpass-sdk/react-native-trusted-device-v2)  	 |
 | 5  | Web Browser		| [Web Browser](README.Web.md)|                                             |                                                                      |
