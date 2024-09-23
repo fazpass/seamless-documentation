@@ -128,7 +128,9 @@ Meta is an object that contains information about the user's device.
   "is_screen_sharing":true/false,
   "is_debug":true/false,
   "application":"com.tokopedia.marketplace",
-  "device_id":{"name":"Samsung",
+  "device_id":{
+                "id": "1779c4c7-a526-4eee-aeb1-d1a5df92d9e0",
+                "name":"Samsung",
                 "os_version":"Q",
                 "series":"A30",
                 "cpu":"Mediatek"
