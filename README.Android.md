@@ -31,10 +31,10 @@ allprojects {
 	repositories {
 		// Another repo...
 
-        maven { 
-            url 'https://jitpack.io'
-            credentials { username fazpassAuthToken }
-        }
+	        maven { 
+	            url 'https://jitpack.io'
+	            credentials { username fazpassAuthToken }
+	        }
 	}
 }
 ```
