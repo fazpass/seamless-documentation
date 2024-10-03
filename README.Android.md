@@ -70,7 +70,7 @@ dependencies {
 
 #### Version tag
 
-| Version | Tag | Date 		                                                                  |
+| Version | Tag | Release Date 		                                                                  |
 | -- | --	 			|--------------------------------------------------------------------------|
 | 1.0 (Latest)  | americanbobtail-v1  	| Aug 30   |                                     | 
 
