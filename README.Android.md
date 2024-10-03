@@ -68,6 +68,12 @@ dependencies {
 }
 ```
 
+#### Version tag
+
+| Version | Tag | Date 		                                                                  |
+| -- | --	 			|--------------------------------------------------------------------------|
+| 1.0 (Latest)  | americanbobtail-v1  	| Aug 30   |                                     | 
+
 ### 4. Sync project with gradle files
 
 ## Getting Started
