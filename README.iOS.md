@@ -8,7 +8,7 @@ iOS 13.0
 
 ## Installation
 
-You can add this package into your project using swift package manager (SPM).
+You can add this package into your project using swift package manager (SPM) or Cocoapods. Make sure you have prepared the access token by contacting Fazpass.
 
 ### Using Swift Package
 
@@ -20,6 +20,23 @@ You can add this package into your project using swift package manager (SPM).
 6. Enter this package URL: https://github.com/fazpass-sdk/ios-trusted-device-v2.git
 7. If there is a prompt to login, pick the github account you just added
 8. Click Add Package
+
+### Using Cocoapods
+
+1. Open terminal in your project directory
+2. Run `pod repo add ios-trusted-device-v2 https://github.com/fazpass-sdk/ios-trusted-device-v2`
+3. If asked for credentials, use 'fazpass-sdk' as username, then use the access token as password
+4. Then in your podspec file, add 'ios-trusted-device-v2' as dependency:
+
+```podspec
+Pod::Spec.new do |s|
+
+  //...
+
+  // Add this at the bottom
+  s.dependency 'ios-trusted-device-v2'
+end
+```
 
 ## Getting Started
 
