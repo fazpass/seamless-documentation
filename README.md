@@ -16,7 +16,7 @@
 | 1  | Android Native  	| [Link](README.Android.md)  		     |
 | 2  | IOS Native		| [Link](README.iOS.md)  			        |
 | 3  | Flutter			| [Link](https://github.com/fazpass-sdk/flutter-trusted-device-v2)  		     |
-| 4  | React Native		| [Link](https://github.com/fazpass-sdk/react-native-trusted-device-v2)  	 |
+| 4  | React Native		| [Link](README.ReactNative.md)  	 |
 | 5  | Web Browser		| [Web Browser](README.Web.md)|                                             |                                                                      |
 
 This sdk will generate META that will be used in the next step. As looked in the chart.
