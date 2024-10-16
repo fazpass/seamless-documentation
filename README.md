@@ -15,7 +15,7 @@
 | -- | --	 			|--------------------------------------------------------------------------|
 | 1  | Android Native  	| [Link](README.Android.md)  		     |
 | 2  | IOS Native		| [Link](README.iOS.md)  			        |
-| 3  | Flutter			| [Link](https://github.com/fazpass-sdk/flutter-trusted-device-v2)  		     |
+| 3  | Flutter			| [Link](README.Flutter.md)  		     |
 | 4  | React Native		| [Link](README.ReactNative.md)  	 |
 | 5  | Web Browser		| [Web Browser](README.Web.md)|                                             |                                                                      |
 
