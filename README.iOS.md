@@ -26,7 +26,7 @@ You can add this package into your project using swift package manager (SPM) or 
 1. Open terminal in your project directory
 2. Run `pod repo add ios-trusted-device-v2 https://github.com/fazpass-sdk/ios-trusted-device-v2`
 3. If asked for credentials, use 'fazpass-sdk' as username, then use the access token as password
-4. Then in your Podfile, add 'ios-trusted-device-v2' as a dependency pod:
+4. Then in your Podfile, add 'ios-trusted-device-v2' as a dependency pod in your target:
 
 ```Podfile
 pod 'ios-trusted-device-v2'
