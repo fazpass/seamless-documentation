@@ -46,7 +46,7 @@ class MainActivity: /*FlutterActivity()*/ FlutterFragmentActivity() {
 
 ```kotlin
 class FazpassPlugin(
-    activity: FragmentActivity
+    private val activity: FragmentActivity
 ): FlutterPlugin {
 
     private val fazpass = FazpassFactory.getInstance()
