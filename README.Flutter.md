@@ -65,6 +65,7 @@ class FazpassPlugin(
         channel.setMethodCallHandler(callHandler)
         cdChannel = EventChannel(binding.binaryMessenger, CD_CHANNEL)
         cdChannel.setStreamHandler(cdStreamHandler)
+        fazpass.init(activity, YOUR-PUBLIC-KEY.pub)
     }
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
