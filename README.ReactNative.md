@@ -96,7 +96,7 @@ class FazpassModule(context: ReactApplicationContext, private val fazpass: Fazpa
         UiThreadUtil.runOnUiThread {
             fazpass.generateMeta(activity, accountIndex.toInt()) { meta, e ->
                 if (e != null) {
-                    promise.reject(e.exception)
+                    promise.reject(e.name)
                     return@generateMeta
                 }
 
