@@ -83,7 +83,7 @@ class FazpassPackage: ReactPackage {
 ```kotlin
 class FazpassModule(context: ReactApplicationContext, private val fazpass: Fazpass): ReactContextBaseJavaModule(context) {
 
-    override fun getName(): String = "FazpassModule"
+    override fun getName(): String = "TrustedDeviceV2"
 
     @ReactMethod
     fun generateMeta(accountIndex: Double, promise: Promise) {
