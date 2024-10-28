@@ -112,99 +112,134 @@ After you call the API, you will get the response. This should like this
 Meta is an object that contains information about the user's device.
 ```JSON
 {
-  "challenge":"UUID"
-  "fazpass_id":"fazpass_id",
-  "scoring":90.0,
-  "risk_level":"HIGH/LOW",
-  "is_active":true/false,
-  "time_stamp":"353666389900000",
-  "platform":"android/ios",
-  "is_rooted":true/false,
-  "is_emulator":true/false,
-  "is_gps_spoof":true/false,
-  "is_app_tempering":true/false,
-  "is_vpn":true/false,
-  "is_clone_app":true/false,
-  "is_screen_sharing":true/false,
-  "is_debug":true/false,
-  "application":"com.tokopedia.marketplace",
-  "device_id":{
-                "id": "1779c4c7-a526-4eee-aeb1-d1a5df92d9e0",
-                "name":"Samsung",
-                "os_version":"Q",
-                "series":"A30",
-                "cpu":"Mediatek"
-              },
-  "sim_serial":["abcde12345","zyxwv9875"],
-  "sim_operator":["indosat","tsel"],
-  "geolocation":{"lat":"2.90887363",
-                 "lng":"4.9099876",
-                  "distance":"8.4",
-                 "time":"30000"},
-  "client_ip":
-{
-  "ipAddress": "34.101.48.141",
-  "continentCode": "AS",
-  "continentName": "Asia",
-  "countryCode": "ID",
-  "countryName": "Indonesia",
-  "isEuMember": false,
-  "currencyCode": "IDR",
-  "currencyName": "Rupiah",
-  "phonePrefix": "62",
-  "languages": [
-    "id",
-    "en",
-    "nl",
-    "jv"
-  ],
-  "stateProvCode": "JK",
-  "stateProv": "Jakarta",
-  "city": "Jakarta",
-  "geonameId": 1642911,
-  "gmtOffset": 7,
-  "timeZone": "Asia/Jakarta",
-  "latitude": -6.20876,
-  "longitude": 106.846,
-  "weatherCode": "IDXX0022",
-  "asNumber": 396982,
-  "asName": "GOOGLE-CLOUD-PLATFORM",
-  "isp": "Google LLC",
-  "usageType": "hosting",
-  "organization": "Google Asia Pacific Pte. Ltd.",
-  "isCrawler": false,
-  "isProxy": false,
-  "threatLevel": "low"
-},
-  "notifiable_devices":[
-                         {"name":"Samsung",
-                         "os_version":"Q",
-                         "series":"A30",
-                         "cpu":"Mediatek",
-                          "id":"uuid"
-                           },
-                          {"name":"Samsung",
-                          "os_version":"Q",
-                          "series":"A50",
-                          "cpu":"Helios"
-                           "id":"uuid"
-                            }
-                        ],
-  "biometric":{
-              "level":"LOW/HIGH",
-               "is_changed":false/true
-              },
-"enrolled_devices": [
-                {
-                    "id": "c519a31b-839f-4e33-9bfc-5b64fe38593f",
-                    "name": "vivo",
-                    "os_version": "Android 27",
-                    "series": "vivo 1816",
-                    "cpu": "MT6762V/WR",
-                    "EnrolleDate": "2024-01-01T05:14:38.606Z"
-                }
-            ]
-}
+  "identification":{
+      "data":{
+        "trx_id":"",
+        "challenge":"UUID",
+        "fazpass_id":"fazpass_id",
+        "scoring":90.0,
+        "risk_level":"HIGH/LOW",
+        "is_active":true/false,
+        "time_stamp":353666389900000,
+        "platform":"android/ios",
+        "application":"com.fazpass.app"
+      }
+   },
+  "features":{
+    "data":{
+       "version":"",
+       "device_intelligence":true/false
+    }
+  },
+  "root":{
+     "data":{
+         "result":true/false
+      }
+  },
+  "emulator":{
+     "data":{
+         "result":true/false
+      }
+  },
+ "tempering":{
+   "data":{
+         "result":true/false
+      }
+ },
+ "clonning":{
+   "data":{
+         "result":true/false
+      }
+ },
+ "screen_sharing":{
+   "data":{
+         "result":true/false
+      }
+ },
+ "debuging":{
+   "data":{
+         "result":true/false
+      }
+ },
+  "device_information":{
+    "data":{
+        "id": "1779c4c7-a526-4eee-aeb1-d1a5df92d9e0",
+        "name":"Samsung",
+        "os_version":"Q",
+        "series":"A30",
+        "cpu":"Mediatek"
+     }
+ },
+ "sim_information":{
+    "data":
+      [
+        {
+           "sim_operator":"",
+           "sim_serial":""
+        },
+        {
+           "sim_operator":"",
+           "sim_serial":""
+        }
+      ]
+ },
+ "biometric":{
+   data:{
+      "level":"LOW/HIGH",
+      "is_changed":false/true,
+      "is_available":true/false
+   }
+ },
+ "gps_information":{
+    "data":{
+      "lat":"2.90887363",
+      "lng":"2.90887363",
+      "is_spoofed":true/false,
+      "distinct": {
+          "time":"",
+          // On Km
+          "distance":"8.0"
+      }
+    }
+ },
+ "linked_devices":{
+   "data":[
+           {
+              "id": "c519a31b-839f-4e33-9bfc-5b64fe38593f",
+               "name": "vivo",
+               "os_version": "Android 27",
+               "series": "vivo 1816",
+               "cpu": "MT6762V/WR",
+               "Enrolled_date": "2024-01-01T05:14:38.606Z"
+            }
+     ]
+ },
+ "ip_information":{
+   "data":{
+      "ip_address":"127.0.0.1",
+      "geolocation":{
+          "lat":"2.90887363",
+          "lng":"2.90887363",
+          "country":"Indonesia",
+          "prefix":"",
+          "state_province": "West Java",
+          "district": "Kota Bogor",
+          "city": "Bogor",
+          "timeZone": "Asia/Jakarta",
+      }
+      "asn":{
+          "number":9876,
+          "name":"",
+      },
+      "isp":{
+          "name":""
+      },
+      "connection":{
+        "type":"hosting/line/etc",
+        "usage":"consumer"
+      },
+   }
+ }
 ```
 All you need is here. You can use this meta to create your own logic to secure your application.
 ### 1. Fazpass ID
