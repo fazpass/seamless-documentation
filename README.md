@@ -98,6 +98,20 @@ Verify if the received notification is valid or not, this will auto enroll user 
 ```
 ![Logo](validate-notif-flow.png)
 
+#### Delete Other Device
+/v2/trusted-device/remove/another-device
+Remove linked device from trusted device
+```JSON
+{
+    "fazpass_id": "17d82ff72ec9343c9fb04a4965265377f144d5ea862737dc",
+    "merchant_app_id": "{{APP_ID}}",
+    "meta": "{{META_STAGING_UGLY}}",
+    "selected_device": "c519a31b-839f-4e33-9bfc-5b64fe38593f",
+    "challenge":"95e2c319-4d94-4f5b-bb55-d43ed03a13cc"
+}
+```
+![Logo](delete-other.png)
+
 ### Handle Response
 After you call the API, you will get the response. This should like this
 ```JSON
