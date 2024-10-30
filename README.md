@@ -131,8 +131,10 @@ Meta is an object that contains information about the user's device.
         "trx_id":"",
         "challenge":"UUID",
         "fazpass_id":"fazpass_id",
-        "scoring":90.0,
-        "risk_level":"HIGH/LOW",
+           "confidence": {
+                    "score": 170,
+                    "level": "LOW"
+                },
         "is_active":true/false,
         "time_stamp":353666389900000,
         "platform":"android/ios",
@@ -181,7 +183,8 @@ Meta is an object that contains information about the user's device.
         "name":"Samsung",
         "os_version":"Q",
         "series":"A30",
-        "cpu":"Mediatek"
+        "cpu":"Mediatek",
+        "reset_time":""
      }
  },
  "sim_information":{
@@ -224,7 +227,7 @@ Meta is an object that contains information about the user's device.
                "os_version": "Android 27",
                "series": "vivo 1816",
                "cpu": "MT6762V/WR",
-               "Enrolled_date": "2024-01-01T05:14:38.606Z"
+               "enrolled_date": "2024-01-01T05:14:38.606Z"
             }
      ]
  },
@@ -239,7 +242,7 @@ Meta is an object that contains information about the user's device.
           "state_province": "West Java",
           "district": "Kota Bogor",
           "city": "Bogor",
-          "timeZone": "Asia/Jakarta",
+          "time_zone": "Asia/Jakarta",
       }
       "asn":{
           "number":9876,
@@ -323,6 +326,7 @@ Contains detailed device information.
 - **os_version (String)**: OS version, e.g., `"Q"`.
 - **series (String)**: Device series, e.g., `"A30"`.
 - **cpu (String)**: CPU details, e.g., `"Mediatek"`.
+- **reset_time (time)**: latest factory reset time of device, e.g., `"2024-10-08T07:31:34Z"`.
 
 ### sim_information
 
