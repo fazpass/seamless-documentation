@@ -70,9 +70,11 @@ dependencies {
 
 #### Version tag
 
-| Version | Tag | Release Date 		                                                                  |
-| -- | --	 			|--------------------------------------------------------------------------|
-| 1.0 (Latest)  | americanbobtail-v1  	| Aug 30   |                                     | 
+| Version 	| Tag 			| Release Date 	|
+| -- 		| --	 		| --		|
+| 2.0 (latest) 	| bengal-v1  		| Nov 1   	|
+| 1.1 		| americanbobtail-v2  	| Nov 1   	|
+| 1.0 		| americanbobtail-v1  	| Aug 30   	|
 
 ### 4. Sync project with gradle files
 
