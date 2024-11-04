@@ -1,3 +1,6 @@
+> [!NOTE]
+> Check out our latest version of SDK (2.0) for more features and optimizations [here](README.Android.V2.md)
+
 # android-trusted-device-v2
 
 Visit [official website](https://fazpass.com) for more information about the product and see documentation at [online documentation](https://doc.fazpass.com) for more technical details.
@@ -72,7 +75,6 @@ dependencies {
 
 | Version 	| Tag 			| Release Date 	|
 | -- 		| --	 		| --		|
-| 2.0 (latest) 	| bengal-v1  		| Nov 1   	|
 | 1.1 		| americanbobtail-v2  	| Nov 1   	|
 | 1.0 		| americanbobtail-v1  	| Aug 30   	|
 
