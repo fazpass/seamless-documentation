@@ -73,8 +73,6 @@ dependencies {
 | Version 	| Tag 			| Release Date 	|
 | -- 		| --	 		| --		|
 | 2.0 (latest) 	| bengal-v1  		| Nov 1   	|
-| 1.1 		| americanbobtail-v2  	| Nov 1   	|
-| 1.0 		| americanbobtail-v1  	| Aug 30   	|
 
 ### 4. Sync project with gradle files
 
@@ -267,7 +265,7 @@ For detail, read their description in their own segment down below.
 * Your app cloned status.
 * Your device mirroring or projecting status.
 * Your app signatures.
-* Your device information (Android version, phone brand, phone type, phone cpu).
+* Your device information (Android version, phone brand, phone type, phone cpu, reset time).
 * Your network IP Address and vpn status.
 
 ### Sensitive data collected
