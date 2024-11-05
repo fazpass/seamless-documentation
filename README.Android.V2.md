@@ -72,7 +72,8 @@ dependencies {
 
 | Version 	| Tag 			| Release Date 	|
 | -- 		| --	 		| --		|
-| 2.0 (latest) 	| bengal-v1  		| Nov 1   	|
+| 2.1 (latest) 	| bengal-v2  		| Nov 5   	|
+| 2.0	 	| bengal-v1  		| Nov 1   	|
 
 ### 4. Sync project with gradle files
 
