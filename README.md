@@ -235,8 +235,8 @@ Meta is an object that contains information about the user's device.
    "data":{
       "ip_address":"127.0.0.1",
       "geolocation":{
-          "lat":"2.90887363",
-          "lng":"2.90887363",
+          "lat":2.90887363,
+          "lng":2.90887363,
           "country":"Indonesia",
           "prefix":"",
           "state_province": "West Java",
@@ -371,8 +371,8 @@ Provides network and IP-based location data.
 **Fields**:
 - **ip_address (String)**: IP address of the user.
 - **geolocation (Object)**:
-  - **lat (String)**: Latitude of the IP location.
-  - **lng (String)**: Longitude of the IP location.
+  - **lat (Double/Float)**: Latitude of the IP location.
+  - **lng (Double/Float)**: Longitude of the IP location.
   - **country (String)**: Country of the IP.
   - **prefix (String)**: IP prefix.
   - **state_province (String)**: State or province of the IP.
