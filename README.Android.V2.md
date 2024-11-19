@@ -122,7 +122,9 @@ fazpass.init(this, "YOUR_PUBLIC_KEY_ASSET_NAME")
 Call `generateMeta()` method to automatically launch local authentication (biometric / password) and meta will be generated if authentication is success. 
 Otherwise `BiometricAuthError` exception will occurs.
 
-> You have to call generate meta method using FragmentActivity OR AppCompatActivity as context. Otherwise your app might crash.
+> [!CAUTION]
+> You have to call generate meta method using `FragmentActivity` OR `AppCompatActivity` as context.
+> Otherwise your app might crash.
 
 ```kotlin
 import androidx.fragment.app.FragmentActivity
@@ -156,6 +158,11 @@ class Activity : FragmentActivity() {
 	}
 }
 ```
+
+> [!TIP]
+> If you use android jetpack compose for UI builder, it's okay to change `ComponentActivity` to one of these activities.
+> Because `AppCompatActivity` extends `FragmentActivity`, which extends `ComponentActivity`.
+> [See the reference here.](https://stackoverflow.com/a/67364675)
 
 ### Seamless Best Practice
 
@@ -227,8 +234,9 @@ fazpass.setSettings(accountIndex, null)
 
 `generateMeta()` accountIndex parameter has -1 as it's default value.
 
-> We strongly advised against saving preferences into default account index. If your application
-> only allows one active account, use 0 instead.
+> [!WARNING]
+> We strongly advised against saving preferences into default account index.
+> If your application only allows one active account, use 0 instead.
 
 ## Data Collection
 
