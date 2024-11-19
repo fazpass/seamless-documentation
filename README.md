@@ -13,7 +13,7 @@
 
 | No | Stack Technology | Link 		                                                                  |
 | -- | --	 			|--------------------------------------------------------------------------|
-| 1  | Android Native  	| [Link](README.Android.md)  		     |
+| 1  | Android Native  	| [Link](README.Android.V2.md)  		     |
 | 2  | IOS Native		| [Link](README.iOS.md)  			        |
 | 3  | Flutter			| [Link](README.Flutter.md)  		     |
 | 4  | React Native		| [Link](README.ReactNative.md)  	 |
