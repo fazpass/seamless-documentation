@@ -19,6 +19,10 @@ After the installation is finished, go back immediately to this documentation.
 
 To use native SDK on your flutter application, you have to bridge it by writing native code in your native project, then import it in your flutter project.
 
+<details>
+
+<summary>How to write native code in android</summary>
+
 ### Writing Native Code in Android
 
 Make sure Fazpass SDK is installed correctly by importing the SDK in your android project. If there is no error, then continue reading.
@@ -160,6 +164,11 @@ class FazpassCDStreamHandler(
     }
 }
 ```
+</details>
+
+<details>
+
+<summary>How to write native code in iOS</summary>
 
 ### Writing Native Code in iOS
 
@@ -301,6 +310,12 @@ public class FazpassPlugin: NSObject, FlutterPlugin {
     }
 }
 ```
+
+</details>
+
+<details>
+
+<summary>How to use written native code in flutter</summary>
 
 ### Using Written Native Code in Flutter
 
@@ -556,6 +571,8 @@ enum SensitiveData {
   simNumbersAndOperators,
 }
 ```
+
+</details>
 
 ## Getting Started
 
