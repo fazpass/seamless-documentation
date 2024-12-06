@@ -4,7 +4,7 @@ Visit [official website](https://fazpass.com) for more information about the pro
 
 ## Android OS
 
-Minimum: Android 24
+Minimum: Android 21
 Maximum: Android 34
 
 ## Installation
