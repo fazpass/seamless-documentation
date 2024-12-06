@@ -70,10 +70,11 @@ dependencies {
 
 #### Version tag
 
-| Version 	| Tag 			| Release Date 	|
-| -- 		| --	 		| --		|
-| 2.1 (latest) 	| bengal-v2  		| Nov 5   	|
-| 2.0	 	| bengal-v1  		| Nov 1   	|
+| Version 	| Tag 			| Release Date 	| Note |
+| -- 		| --	 		| --		| -- |
+| 2.2 (latest) 	| bengal-v3 		| Dec 5   	| - Now works on older android version (SDK level 21) <br> - Added feature to change biometric message |
+| 2.1	 	| bengal-v2  		| Nov 5   	| - Fixed error when generating meta in some devices |
+| 2.0	 	| bengal-v1  		| Nov 1   	| - Added option to turn off biometric when generating meta |
 
 ### 4. Sync project with gradle files
 
@@ -137,10 +138,11 @@ class Activity : FragmentActivity() {
 
 	fun generateMeta() {
 		fazpass.generateMeta(
-      this@Activity,
-      accountIndex = -1, 
-      biometricAuth = true // set to false if you don't want to popup biometric
-    ) { meta, exception ->
+			this@Activity,
+			accountIndex = -1, 
+			biometricAuth = false, // set to true if you want to popup biometric
+			biometricMessage = "Biometric required" // customize your popup biometric message here
+    	) { meta, exception ->
 		    when (exception) {
 		        is BiometricAuthError -> TODO()
 		        is BiometricUnavailableError -> TODO()
